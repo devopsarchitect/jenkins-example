@@ -10,6 +10,12 @@ pipeline {
                     sh 'mvn clean compile'
                 //}
             }
+            post {
+                success {
+                    echo 'Now Archiving...'
+                    archiveArtifacts artifacts: '**/target/*.war'
+                }
+            }
         }
 
         stage ('Testing Stage') {
