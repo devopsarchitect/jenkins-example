@@ -23,7 +23,7 @@ pipeline {
             steps {
                 echo  ' stage Testing Stage... '
                 //withMaven(maven : 'maven_3_5_0') {
-                    sh 'mvn test'
+                   // sh 'mvn test'
                // }
             }
         }
